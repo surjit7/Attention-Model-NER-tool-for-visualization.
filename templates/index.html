@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rchilli</title>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style type="text/css">
+	.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+#custom_card{
+	background-color:grey;
+	color:#fff;
+	padding:5px;
+}
+#custom_card2{
+	background-color:#383838;
+	color:#fff;
+	padding:10px;
+}
+</style>
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-dark bg-light justify-content-center : Active">
+                <span id="hs_cos_wrapper_module_160188412396580_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><a href="https://www.rchilli.com/" target="_parent" id="hs-link-module_160188412396580_" style="border-width:0px;border:0px;"><img src="https://www.rchilli.com/hubfs/RChilli-Parse-Match-Enrich.png" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="RChilli-Parse-Match-Enrich" title="RChilli-Parse-Match-Enrich"></a></span>
+            <h2 class="display-5">Rchilli Attention Model NER </h2>
+        </nav>
+    </div>
+
+
+<! ╌ ╌>
+<! ╌ Form box starts here╌>
+<! ╌ ╌>
+
+
+    <form>
+        <div class="text-sm text-gray-500 mb-1.5">Task: <code>[Token Classification]</code></div>
+    </form>
+
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="col-sm-6">
+                <div class="card" >
+                    <div class="card-body">
+                        <form action="" id="textform" method="post">
+                            <textarea name="rawtext" id="text_area" rows="22" cols="6" required="true" name="rawtext" class="form-control"   style="align-content:left; overflow:auto; border:6px outset #000000;">{{text}}</textarea>
+                            <div class="container bg-light">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-warning" onclick="javascript:eraseText();">Clear</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p>{{output|markdown}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+                function eraseText() {
+                                        document.getElementById("text_area").value = "";
+                                      }
+    </script>
+
+
+</body>
+</html>
